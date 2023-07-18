@@ -2,6 +2,7 @@ package works.emregumus.beywitherbossconnection;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import works.emregumus.beywitherbossconnection.Api.Config.FileCreator;
+import works.emregumus.beywitherbossconnection.Listeners.PlayerJoinPortalEvent;
 
 public final class BeyWitherBossConnection extends JavaPlugin {
 
@@ -14,6 +15,8 @@ public final class BeyWitherBossConnection extends JavaPlugin {
         instance = this;
 
         config = new FileCreator(this, "config.yml");
+
+        getServer().getPluginManager().registerEvents(new PlayerJoinPortalEvent(), this);
     }
 
     @Override
