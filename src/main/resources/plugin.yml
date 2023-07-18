@@ -1,0 +1,4 @@
+name: BeyWitherBossConnection
+version: '${version}'
+main: works.emregumus.beywitherbossconnection.BeyWitherBossConnection
+api-version: '1.19'
