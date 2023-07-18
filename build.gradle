@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
 group = 'works.emregumus'
@@ -15,10 +16,19 @@ repositories {
         name = "sonatype"
         url = "https://oss.sonatype.org/content/groups/public/"
     }
+    maven {
+        name = "krypton-repo"
+        url = 'https://repo.kryptonmc.org/releases'
+    }
 }
 
 dependencies {
     compileOnly "io.papermc.paper:paper-api:1.19.4-R0.1-SNAPSHOT"
+    implementation "dev.triumphteam:triumph-gui:3.1.2"
+}
+
+shadowJar {
+    relocate("dev.triumphteam.gui", "works.emregumus.beywitherbossconnection.libs.dev.triumphteam.gui")
 }
 
 def targetJavaVersion = 17

@@ -1,0 +1,11 @@
+Boss:
+  Options:
+    Portal:
+      X:
+      Y:
+      Z:
+      Yaw:
+      Pitch:
+
+Commands:
+  - say %player% amowny adamdır
